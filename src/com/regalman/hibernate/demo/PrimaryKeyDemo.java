@@ -1,12 +1,12 @@
-package com.chivas.hibernate.demo;
+package com.regalman.hibernate.demo;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.chivas.hibernate.demo.entity.Student;
+import com.regalman.hibernate.demo.entity.Student;
 
-public class CreateStudentDemo {
+public class PrimaryKeyDemo {
 	public static void main(String[] args) {
 		// create session factory
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Student.class)
@@ -20,7 +20,9 @@ public class CreateStudentDemo {
 
 			// Create student object
 			System.out.println("Createing new student object");
-			Student student = new Student("Peter", "Silberman", "Peter.Silberman@skynet.com");
+			Student student1 = new Student("John", "Connor", "John.Connor@skynet.com");
+			Student student2 = new Student("Sarah", "Connor", "Sarah.Connor@skynet.com");
+			Student student3 = new Student("Kyle", "Reese", "Kyle.Reese@skynet.com");
 
 			// begin transaction
 			System.out.println("Starting transaction");
@@ -28,7 +30,9 @@ public class CreateStudentDemo {
 
 			// save the student object
 			System.out.println("Saving the student object");
-			session.save(student);
+			session.save(student1);
+			session.save(student2);
+			session.save(student3);
 
 			// commit transaction
 			System.out.println("Commit to the database");

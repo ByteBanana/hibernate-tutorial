@@ -1,4 +1,4 @@
-package com.chivas.jdbc;
+package com.regalman.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

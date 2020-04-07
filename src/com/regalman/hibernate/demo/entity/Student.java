@@ -1,4 +1,4 @@
-package com.chivas.hibernate.demo.entity;
+package com.regalman.hibernate.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
