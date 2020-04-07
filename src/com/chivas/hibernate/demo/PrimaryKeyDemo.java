@@ -20,10 +20,9 @@ public class PrimaryKeyDemo {
 
 			// Create student object
 			System.out.println("Createing new student object");
-			Student student1 = new Student("Saharat1", "Paynok1", "saharat1.paynok@gmail.com");
-			Student student2 = new Student("Saharat2", "Paynok2", "saharat2.paynok@gmail.com");
-			Student student3 = new Student("Saharat3", "Paynok3", "saharat3.paynok@gmail.com");
-			Student student4 = new Student("Saharat4", "Paynok4", "saharat4.paynok@gmail.com");
+			Student student1 = new Student("John", "Connor", "John.Connor@skynet.com");
+			Student student2 = new Student("Sarah", "Connor", "Sarah.Connor@skynet.com");
+			Student student3 = new Student("Kyle", "Reese", "Kyle.Reese@skynet.com");
 
 			// begin transaction
 			System.out.println("Starting transaction");
@@ -34,7 +33,6 @@ public class PrimaryKeyDemo {
 			session.save(student1);
 			session.save(student2);
 			session.save(student3);
-			session.save(student4);
 
 			// commit transaction
 			System.out.println("Commit to the database");
